@@ -120,6 +120,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="answers.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="letter.cpp" />
     <ClCompile Include="MyForm.cpp" />
@@ -128,10 +129,11 @@
     <ClCompile Include="word.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="answers.h" />
     <ClInclude Include="Game.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="letter.h" />
+    <ClInclude Include="Letter.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

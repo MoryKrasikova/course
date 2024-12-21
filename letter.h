@@ -1,20 +1,17 @@
 #pragma once
 using namespace System;
 using namespace System::Collections::Generic;
-ref class letter
+public ref class Letter
 {
 private:
-    System::Char let; // Символ буквы
+    Char let; // Символ буквы
 
 public:
     // Конструктор
-    letter(System::Char letter) 
-    {
-        let = letter;
-    }
+    Letter(Char letter) : let(letter) {}
 
     // Метод для получения буквы
-    System::Char getValue(){
+    Char getValue() {
         return let;
     }
 };

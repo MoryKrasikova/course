@@ -33,6 +33,9 @@
     <ClCompile Include="letter.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="answers.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -50,7 +53,10 @@
     <ClInclude Include="word.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="letter.h">
+    <ClInclude Include="answers.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Letter.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
