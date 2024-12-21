@@ -3,7 +3,7 @@ using namespace System;
 using namespace System::Collections::Generic;
 using namespace System::Windows::Forms;
 #include "answers.h"
-ref class gameresult :
+public ref class gameresult :
     public answers
 {
 private:
@@ -15,10 +15,15 @@ private:
 
 public:
     // Конструктор
-    gameresult() : answers(0, 0, 0), win(0), loss(0), winresult(0), kol(0) {}
+    gameresult() : answers(0, 0, 6), win(0), loss(0), winresult(0), kol(0) {}
 
     // Метод для отображения статистики в Label
-    String^ DisplayStats(Label^ outputLabel2) {
+    void displayatats(Label^ outputLabel2) {
+        outputLabel2->Text += String::Format("Введенные буквы: ");
+        for (int i = 0; i < letters->Count; ++i) {
+            outputLabel2->Text += String::Format("{0} ", letters[i]->getvalue());
+        }
+        outputLabel2->Text += String::Format("\n");
         outputLabel2->Text = String::Format("Статистика ответов:\n");
         outputLabel2->Text += String::Format("Верные ответы: {0}\n",rightanswers);
         outputLabel2->Text += String::Format("Неверные ответы: {0}\n", wronganswers);

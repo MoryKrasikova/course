@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="answers.cpp" />
+    <ClCompile Include="Fileexception.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="gameresult.cpp" />
     <ClCompile Include="letter.cpp" />
@@ -131,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="answers.h" />
+    <ClInclude Include="Fileexception.h" />
     <ClInclude Include="Game.h">
       <FileType>CppForm</FileType>
     </ClInclude>
