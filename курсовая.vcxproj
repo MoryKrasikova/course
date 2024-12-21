@@ -122,6 +122,7 @@
   <ItemGroup>
     <ClCompile Include="answers.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="gameresult.cpp" />
     <ClCompile Include="letter.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Rules.cpp" />
@@ -133,6 +134,7 @@
     <ClInclude Include="Game.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="gameresult.h" />
     <ClInclude Include="Letter.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>

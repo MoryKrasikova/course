@@ -14,7 +14,7 @@ private:
     List<Letter^>^ letters; // Список для хранения введённых букв
 public:
     // Конструктор
-    answers(int w, int r, int t) : wronganswers(w), rightanswers(r), tries(t) {
+    answers(int w, int r, int t) : wronganswers(w), rightanswers(r), tries(t){
         letters = gcnew List<Letter^>(); 
     }
 
@@ -24,20 +24,20 @@ public:
 
     // Метод для установки слова
 private:
-    void setCurrentWord(String^ word) {
+    void setcurrentword(String^ word) {
         currentword = word;
     }
 
 public:
-    void setAnswer(char ans) {
-        addLetter(ans); 
+    void setanswer(char ans) {
+        addletter(ans); 
     }
 
-    String^ getCurrentWord() {
+    String^ getcurrentword() {
         return currentword;
     }
 
-    void addLetter(char letter) {
+    void addletter(char letter) {
         letters->Add(gcnew Letter(letter));
     }
 
@@ -72,19 +72,19 @@ public:
         }
     }
     // Метод для получения количества верных ответов
-    int getRightAnswers()  {
+    int getrightanswers()  {
         return rightanswers;
     }
 
     // Метод для получения количества неверных ответов
-    int getWrongAnswers() {
+    int getwronganswers() {
         return wronganswers;
     }
     //метод для вывода использованных букв
-    void displayLetters(Label^ outputLabel1) {
+    void displayletters(Label^ outputLabel1) {
         outputLabel1->Text = String::Format("Введенные буквы: ");
         for (int i = 0; i < letters->Count; ++i) {
-            outputLabel1->Text += String::Format("{0} ", letters[i]->getValue());
+            outputLabel1->Text += String::Format("{0} ", letters[i]->getvalue());
         }
         outputLabel1->Text += String::Format("\n");
     }

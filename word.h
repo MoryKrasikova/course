@@ -15,7 +15,7 @@ public:
     ~word() {}
 
     // Метод для выбора случайного слова
-    void selectRandomWord(String^ filename) {
+    void selectrandomword(String^ filename) {
         List<String^>^ words = gcnew List<String^>(); // Список для хранения слов
         StreamReader^ file = gcnew StreamReader(filename); 
 
@@ -35,12 +35,12 @@ public:
     }
 
     // Метод для получения слова
-    String^ getRandomWord() {
+    String^ getrandomword() {
         return randomword;
     }
 
     // Метод для получения длины слова
-    int getLength() {
+    int getlength() {
         return length;
     }
 };
