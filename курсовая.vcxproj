@@ -81,6 +81,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -111,6 +113,47 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="Rules.cpp" />
+    <ClCompile Include="Stats.cpp" />
+    <ClCompile Include="word.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Rules.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Stats.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="word.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rules.resx">
+      <DependentUpon>Rules.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stats.resx">
+      <DependentUpon>Stats.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
