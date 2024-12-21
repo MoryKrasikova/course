@@ -6,6 +6,7 @@
 #include <locale>
 #include <codecvt>
 #include <fstream>
+#include "word.h"
 namespace курсовая {
 
 	using namespace System;
@@ -282,7 +283,7 @@ namespace курсовая {
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: void InitializeGame1(String^ filename1) {
+	private: void InitializeGame1(String^ filename) {
 		
 	}
 
