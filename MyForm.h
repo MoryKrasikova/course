@@ -40,6 +40,7 @@ namespace курсовая {
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Button^ button4;
 	protected:
 
 	private:
@@ -59,6 +60,7 @@ namespace курсовая {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -85,7 +87,7 @@ namespace курсовая {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button1->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->button1->Location = System::Drawing::Point(210, 190);
+			this->button1->Location = System::Drawing::Point(211, 188);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(174, 47);
 			this->button1->TabIndex = 1;
@@ -104,7 +106,7 @@ namespace курсовая {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button2->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->button2->Location = System::Drawing::Point(211, 261);
+			this->button2->Location = System::Drawing::Point(211, 252);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(174, 47);
 			this->button2->TabIndex = 2;
@@ -123,7 +125,7 @@ namespace курсовая {
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button3->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->button3->Location = System::Drawing::Point(211, 334);
+			this->button3->Location = System::Drawing::Point(211, 316);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(174, 47);
 			this->button3->TabIndex = 3;
@@ -131,12 +133,32 @@ namespace курсовая {
 			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
+			// button4
+			// 
+			this->button4->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->button4->BackColor = System::Drawing::Color::IndianRed;
+			this->button4->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button4->FlatAppearance->BorderColor = System::Drawing::Color::White;
+			this->button4->FlatAppearance->BorderSize = 0;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button4->ForeColor = System::Drawing::SystemColors::InfoText;
+			this->button4->Location = System::Drawing::Point(211, 381);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(174, 47);
+			this->button4->TabIndex = 4;
+			this->button4->Text = L"Выход";
+			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::RosyBrown;
 			this->ClientSize = System::Drawing::Size(622, 453);
+			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
@@ -166,6 +188,9 @@ namespace курсовая {
 		this->Hide();
 		Game^ g = gcnew Game(this);//передаем ссылку на эту форму в MyForm
 		g->ShowDialog();
+	}
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		Application::Exit();
 	}
 };
 }

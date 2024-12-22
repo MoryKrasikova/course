@@ -4,14 +4,17 @@ using namespace System::Collections::Generic;
 public ref class Letter
 {
 private:
-    Char let; // Символ буквы
+    String^ let; // Символ буквы
 
 public:
     // Конструктор
-    Letter(Char letter) : let(letter) {}
+    Letter(String^ letter)  
+    {
+        let = letter;
+    }
 
     // Метод для получения буквы
-    Char getValue() {
+    String^ getvalue() {
         return let;
     }
 };

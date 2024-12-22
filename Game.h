@@ -110,7 +110,7 @@ namespace курсовая {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button2->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->button2->Location = System::Drawing::Point(12, 12);
+			this->button2->Location = System::Drawing::Point(17, 12);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(156, 47);
 			this->button2->TabIndex = 2;
@@ -129,7 +129,7 @@ namespace курсовая {
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button3->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->button3->Location = System::Drawing::Point(179, 12);
+			this->button3->Location = System::Drawing::Point(208, 12);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(156, 47);
 			this->button3->TabIndex = 3;
@@ -148,7 +148,7 @@ namespace курсовая {
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button4->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->button4->Location = System::Drawing::Point(346, 12);
+			this->button4->Location = System::Drawing::Point(400, 12);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(156, 47);
 			this->button4->TabIndex = 4;
@@ -167,7 +167,7 @@ namespace курсовая {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button5->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->button5->Location = System::Drawing::Point(513, 12);
+			this->button5->Location = System::Drawing::Point(586, 12);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(156, 47);
 			this->button5->TabIndex = 5;
@@ -180,19 +180,20 @@ namespace курсовая {
 			this->label1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(13, 72);
+			this->label1->Location = System::Drawing::Point(12, 73);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(657, 62);
+			this->label1->Size = System::Drawing::Size(730, 62);
 			this->label1->TabIndex = 6;
 			this->label1->Click += gcnew System::EventHandler(this, &Game::label1_Click);
 			// 
 			// textBox1
 			// 
 			this->textBox1->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->textBox1->Location = System::Drawing::Point(12, 151);
+			this->textBox1->Location = System::Drawing::Point(17, 151);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(657, 22);
+			this->textBox1->Size = System::Drawing::Size(725, 22);
 			this->textBox1->TabIndex = 7;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Game::textBox1_TextChanged);
 			// 
 			// button6
 			// 
@@ -205,7 +206,7 @@ namespace курсовая {
 			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button6->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->button6->Location = System::Drawing::Point(12, 179);
+			this->button6->Location = System::Drawing::Point(17, 179);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(156, 47);
 			this->button6->TabIndex = 8;
@@ -216,9 +217,9 @@ namespace курсовая {
 			// pictureBox1
 			// 
 			this->pictureBox1->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->pictureBox1->Location = System::Drawing::Point(12, 232);
+			this->pictureBox1->Location = System::Drawing::Point(20, 232);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(382, 309);
+			this->pictureBox1->Size = System::Drawing::Size(398, 309);
 			this->pictureBox1->TabIndex = 9;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -233,9 +234,9 @@ namespace курсовая {
 			this->button7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button7->ForeColor = System::Drawing::SystemColors::InfoText;
-			this->button7->Location = System::Drawing::Point(449, 494);
+			this->button7->Location = System::Drawing::Point(513, 494);
 			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(173, 47);
+			this->button7->Size = System::Drawing::Size(156, 47);
 			this->button7->TabIndex = 10;
 			this->button7->Text = L"Главное меню";
 			this->button7->UseVisualStyleBackColor = false;
@@ -245,9 +246,9 @@ namespace курсовая {
 			// 
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(408, 236);
+			this->label2->Location = System::Drawing::Point(444, 232);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(261, 237);
+			this->label2->Size = System::Drawing::Size(298, 243);
 			this->label2->TabIndex = 11;
 			this->label2->Click += gcnew System::EventHandler(this, &Game::label2_Click);
 			// 
@@ -256,7 +257,7 @@ namespace курсовая {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::RosyBrown;
-			this->ClientSize = System::Drawing::Size(682, 553);
+			this->ClientSize = System::Drawing::Size(754, 553);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->button7);
 			this->Controls->Add(this->pictureBox1);
@@ -270,6 +271,7 @@ namespace курсовая {
 			this->Controls->Add(this->button1);
 			this->Name = L"Game";
 			this->Text = L"Game";
+			this->Load += gcnew System::EventHandler(this, &Game::Game_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -282,8 +284,8 @@ namespace курсовая {
 	String^ word1 = "";
 	String^ randomword = "";
 	String^ anspeople = "";
-	gameresult gr;
-	word w;
+	gameresult^ gr = gcnew gameresult();
+	word^ w = gcnew word();
 	String^ usedletters = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
@@ -308,20 +310,23 @@ namespace курсовая {
 		button3->Enabled = false;
 		button4->Enabled = false;
 		button5->Enabled = false;
+		textBox1->Enabled = true;
+		button6->Enabled = true;
+		label2->Text = "";
 		try {
 			Fileexception::checkfileexists(filename);
 		} catch (Fileexception^ ex) {
 			MessageBox::Show(ex->Message + "\nИмя файла: " + ex->Filename, "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 
-		w.selectrandomword(filename); // Выбор случайного слова
-		randomword = w.getrandomword(); // Получаем выбранное слово
-		gr.setcurrentword(randomword);
-		word1 = gr.getcurrentword();
+		w->selectrandomword(filename); // Выбор случайного слова
+		randomword = w->getrandomword(); // Получаем выбранное слово
+		gr->setcurrentword(randomword);
+		word1 = gr->getcurrentword();
 		length = word1->Length;
 		label1->Text = String::Format("Слово из {0} букв, введите букву",length);
 		for (int i = 0; i < length; i++) {
-			anspeople += "_";
+			anspeople += "_ ";
 		}// Заполняем символами '_'
 	}
 
@@ -337,33 +342,44 @@ namespace курсовая {
 			label1->Text = "";
 		}
 		String^ ui = userinput->Substring(0, 1);
-		gr.setanswer(ui);
+		gr->setanswer(ui);
 
 		// Проверка введенной буквы
-		gr.check(ui, length, usedletters, anspeople, label1);
+		gr->check(ui, length, usedletters, anspeople, label1);
 
 		int count = 0;
-		for (int i = 0; i < length; i++) {
-			if (anspeople[i] != '_' && anspeople[i]!= ' ') {
+		for (int i = 0; i < anspeople->Length; i++) {
+			if (anspeople[i]!='_' && anspeople[i]!=' ') {
 				count += 1;
 			}
 		}
 
 		if (count == length) { // При выигрыше
-			gr.getwinresult(wr);
+			gr->getwinresult(wr);
 			label1->Text = "";
 			label1->Text = String::Format("Вы отгадали слово - {0} за {1} попыток.\n", word1, wr);
-			gr.kolwin();
+			gr->kolwin();
 		}
 
-		if (gr.getwronganswers() == 6) { // При проигрыше
-			gr.getloss(loss);
+		if (gr->getwronganswers() == 6) { // При проигрыше
+			gr->getloss(loss);
 			label1->Text = String::Format("Вы проиграли! Слово - {0}\n", word1);
-			gr.kolloss();
+			gr->kolloss();
 		}
-		if (gr.getrightanswers() == length || gr.getwronganswers() == 6)
+		if (count == length || gr->getwronganswers() == 6)
 		{
-			gr.displayatats(label2);
+			gr->displayatats(label2);
+			length = 0;
+			wr = 0;
+			loss = 0;
+			word1 = "";
+			randomword = "";
+			anspeople = "";
+			usedletters = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+			gr = gcnew gameresult();
+			w = gcnew word();
+			button6->Enabled = false;
+			textBox1->Enabled = false;
 			button2->Enabled = true;
 			button3->Enabled = true;
 			button4->Enabled = true;
@@ -372,6 +388,12 @@ namespace курсовая {
 		textBox1->Clear();
 	}
 	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void Game_Load(System::Object^ sender, System::EventArgs^ e) {
+		button6->Enabled = false;
+		textBox1->Enabled = false;
 	}
 };
 }

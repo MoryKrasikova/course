@@ -44,19 +44,21 @@ public:
         int kol1 = 0;
 
         for (int i = 0; i < wordlength; i++) {
-            if (currentword[i] == answer[0]) {
+            if (answer[0] == currentword[i]) {
                 kol += 1;
-                anspeople = anspeople->Remove(i, 1);
-                anspeople = anspeople->Insert(i, currentword[i].ToString()); // Открываем букву в ansPeople
+                anspeople = anspeople->Remove(i*2, 1);
+                anspeople = anspeople->Insert(i*2, currentword[i].ToString()); // Открываем букву в ansPeople
+
             }
         }
         for (int i = 0; i < usedletters->Length; i++) {
             if (answer[0] == usedletters[i]) { // Сравнение без учета регистра
                 kol1 += 1;
-                usedletters = usedletters->Remove(i, 1)->Insert(i, ".");  // Убираем использованную букву
+                usedletters = usedletters->Remove(i, 1);
+                usedletters = usedletters->Insert(i, ".");  // Убираем использованную букву
             }
         }
-        if (kol > 0) { 
+        if (kol > 0 && kol1>0) { 
             rightanswers += 1;
             outputLabel->Text = String::Format("Вы угадали букву: {0}", anspeople);
             outputLabel->Text += String::Format("\nУ вас осталось {0} попыток.", tries);

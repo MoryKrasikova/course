@@ -24,7 +24,7 @@ public:
             outputLabel2->Text += String::Format("{0} ", letters[i]->getvalue());
         }
         outputLabel2->Text += String::Format("\n");
-        outputLabel2->Text = String::Format("Статистика ответов:\n");
+        outputLabel2->Text += String::Format("Статистика ответов:\n");
         outputLabel2->Text += String::Format("Верные ответы: {0}\n",rightanswers);
         outputLabel2->Text += String::Format("Неверные ответы: {0}\n", wronganswers);
         outputLabel2->Text += String::Format("Статистика игр:\n");
