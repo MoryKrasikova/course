@@ -355,14 +355,13 @@ namespace курсовая {
 		}
 
 		if (count == length) { // При выигрыше
-			gr->getwinresult(wr);
 			label1->Text = "";
+			wr = gr->gettries();
 			label1->Text = String::Format("Вы отгадали слово - {0} за {1} попыток.\n", word1, wr);
 			gr->kolwin();
 		}
 
 		if (gr->getwronganswers() == 6) { // При проигрыше
-			gr->getloss(loss);
 			label1->Text = String::Format("Вы проиграли! Слово - {0}\n", word1);
 			gr->kolloss();
 		}

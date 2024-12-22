@@ -2,6 +2,7 @@
 using namespace System;
 using namespace System::Collections::Generic;
 using namespace System::Windows::Forms;
+using namespace System::IO;
 #include "answers.h"
 public ref class gameresult :
     public answers
@@ -9,13 +10,11 @@ public ref class gameresult :
 private:
     int win; // Количество выигрышей
     int loss; // Количество проигрышей
-    int winresult; // Баллы при выигрыше
-    int kol; // Общее количество попыток
     static int gamesplayed; // Статистика игр
 
 public:
     // Конструктор
-    gameresult() : answers(0, 0, 6), win(0), loss(0), winresult(0), kol(0) {}
+    gameresult() : answers(0, 0, 6), win(0), loss(0) {}
 
     // Метод для отображения статистики в Label
     void displayatats(Label^ outputLabel2) {
@@ -27,34 +26,51 @@ public:
         outputLabel2->Text += String::Format("Статистика ответов:\n");
         outputLabel2->Text += String::Format("Верные ответы: {0}\n",rightanswers);
         outputLabel2->Text += String::Format("Неверные ответы: {0}\n", wronganswers);
-        outputLabel2->Text += String::Format("Статистика игр:\n");
-        outputLabel2->Text += String::Format("Выигрыши: {0}\n", win);
-        outputLabel2->Text += String::Format("Проигрыши: {0}\n", loss);
-        outputLabel2->Text += String::Format("Попытки: {0}\n", kol);
+        outputLabel2->Text += String::Format("Попытки: {0}\n", wronganswers + rightanswers);
 
     }
 
     void kolwin() {
-        win += 1;
-    }
+        String^ filename = "wins.txt";
 
-    int getwin() {
-        return win;
+        // Проверка, существует ли файл, если нет, создаем его
+        if (!File::Exists(filename)) {
+            File::Create(filename)->Close(); 
+        }
+
+        StreamWriter^ writer = gcnew StreamWriter(filename, true); // true для добавления
+        writer->WriteLine(wronganswers + rightanswers);
+        writer->Close(); 
     }
 
     void kolloss() {
-        loss += 1;
-    }
+        String^ filename = "loss.txt";
+        int losscount = 0; 
+        // Проверка, существует ли файл, если нет, создаем его
+        if (!File::Exists(filename)) {
+            File::Create(filename)->Close(); 
+        }
+        else {
+            // Чтение текущего количества проигрышей
+            StreamReader^ reader = gcnew StreamReader(filename);
+            String^ line = reader->ReadLine();
+            if (line != nullptr) {
+                losscount = Int32::Parse(line); // Преобразование строки в число
+            }
+            reader->Close(); 
+        }
 
-    void getloss(int% loss) {
-        loss = this->loss;
-        kol = rightanswers + wronganswers;
-    }
+        losscount++;
 
-    void getwinresult(int% winresult) {
-        winresult = rightanswers + wronganswers;
-        this->winresult = winresult;
-        kol = this->winresult;
+        // Запись обновленного количества проигрышей в файл
+        StreamWriter^ writer = gcnew StreamWriter(filename, false); // false для перезаписи
+        writer->WriteLine(losscount); 
+        writer->Close(); 
+    }
+    int gettries()
+    {
+        int kol = wronganswers + rightanswers;
+        return kol;
     }
 };
 
