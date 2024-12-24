@@ -222,6 +222,7 @@ namespace курсовая {
 			this->pictureBox1->Size = System::Drawing::Size(398, 309);
 			this->pictureBox1->TabIndex = 9;
 			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &Game::pictureBox1_Click);
 			// 
 			// button7
 			// 
@@ -279,6 +280,7 @@ namespace курсовая {
 		}
 #pragma endregion
 	int length = 0;
+	int picture = 0;
 	int wr = 0;
 	int loss = 0;
 	String^ word1 = "";
@@ -312,6 +314,7 @@ namespace курсовая {
 		button5->Enabled = false;
 		textBox1->Enabled = true;
 		button6->Enabled = true;
+		pictureBox1->Image = nullptr;
 		label2->Text = "";
 		try {
 			Fileexception::checkfileexists(filename);
@@ -345,7 +348,20 @@ namespace курсовая {
 		gr->setanswer(ui);
 
 		// Проверка введенной буквы
-		gr->check(ui, length, usedletters, anspeople, label1);
+		gr->check(ui, length, usedletters, anspeople, label1, picture);
+
+		if (picture > 0)
+		{
+			String^ imagePath = String::Format("{0}.png", picture);
+			// Проверяем, существует ли файл
+			if (System::IO::File::Exists(imagePath)) {
+				pictureBox1->Image = Image::FromFile(imagePath); // Загружаем изображение в PictureBox
+				pictureBox1->SizeMode = PictureBoxSizeMode::Zoom; // Устанавливаем режим масштабирования
+			}
+			else {
+				MessageBox::Show("Изображение не найдено.", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
 
 		int count = 0;
 		for (int i = 0; i < anspeople->Length; i++) {
@@ -369,6 +385,7 @@ namespace курсовая {
 		{
 			gr->displayatats(label2);
 			length = 0;
+			picture = 0;
 			wr = 0;
 			loss = 0;
 			word1 = "";
@@ -393,6 +410,8 @@ namespace курсовая {
 	private: System::Void Game_Load(System::Object^ sender, System::EventArgs^ e) {
 		button6->Enabled = false;
 		textBox1->Enabled = false;
+	}
+	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 };
 }

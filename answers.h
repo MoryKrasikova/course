@@ -39,7 +39,7 @@ public:
         letters->Add(gcnew Letter(letter));
     }
 
-    void check(String^ answer, int wordlength, String^ %usedletters, String^ %anspeople, Label^ outputLabel) {
+    void check(String^ answer, int wordlength, String^ %usedletters, String^ %anspeople, Label^ outputLabel, int %picture) {
         int kol = 0; 
         int kol1 = 0;
 
@@ -68,6 +68,7 @@ public:
             outputLabel->Text = String::Format("Вы не угадали букву или уже использовали ее: {0}", anspeople);
             tries = 6 - wronganswers; 
             outputLabel->Text += String::Format("\nУ вас осталось {0} попыток.", tries);
+            picture += 1;
         }
     }
     // Метод для получения количества верных ответов
