@@ -4,7 +4,6 @@
 #include <fstream>
 #include "word.h"
 #include "answers.h"
-#include "Letter.h"
 #include "gameresult.h"
 #include "Fileexception.h"
 namespace курсовая {
@@ -352,10 +351,10 @@ namespace курсовая {
 
 		if (picture > 0)
 		{
-			String^ imagePath = String::Format("{0}.png", picture);
+			String^ imagepath = String::Format("{0}.png", picture);
 			// Проверяем, существует ли файл
-			if (System::IO::File::Exists(imagePath)) {
-				pictureBox1->Image = Image::FromFile(imagePath); // Загружаем изображение в PictureBox
+			if (System::IO::File::Exists(imagepath)) {
+				pictureBox1->Image = Image::FromFile(imagepath); // Загружаем изображение в PictureBox
 				pictureBox1->SizeMode = PictureBoxSizeMode::Zoom; // Устанавливаем режим масштабирования
 			}
 			else {

@@ -20,7 +20,7 @@ public:
     void displayatats(Label^ outputLabel2) {
         outputLabel2->Text += String::Format("Введенные буквы: ");
         for (int i = 0; i < letters->Count; ++i) {
-            outputLabel2->Text += String::Format("{0} ", letters[i]->getvalue());
+            outputLabel2->Text += String::Format("{0} ", letters[i]);
         }
         outputLabel2->Text += String::Format("\n");
         outputLabel2->Text += String::Format("Статистика ответов:\n");

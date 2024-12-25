@@ -2,7 +2,6 @@
 using namespace System;
 using namespace System::Collections::Generic;
 using namespace System::Windows::Forms;
-#include "Letter.h"
 public ref class answers
 {
 protected:
@@ -10,11 +9,11 @@ protected:
     int rightanswers; // Количество верных
     int tries; // Количество попыток
     String^ currentword;// Текущее слово
-    List<Letter^>^ letters; // Список для хранения введённых букв
+    List<String^>^ letters; // Список для хранения введённых букв
 public:
     // Конструктор
     answers(int w, int r, int t) : wronganswers(w), rightanswers(r), tries(t){
-        letters = gcnew List<Letter^>(); 
+        letters = gcnew List<String^>();
     }
 
     // Деструктор
@@ -36,7 +35,7 @@ public:
     }
 
     void addletter(String^ letter) {
-        letters->Add(gcnew Letter(letter));
+        letters->Add(letter);
     }
 
     void check(String^ answer, int wordlength, String^ %usedletters, String^ %anspeople, Label^ outputLabel, int %picture) {
