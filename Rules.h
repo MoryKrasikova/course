@@ -25,7 +25,7 @@ namespace курсовая {
 		}
 		Rules(Form^ m1)
 		{
-			m = m1;//передаем ссылку на форму Rules в m
+			m = m1;//передаем ссылку на форму MyForm в m
 			InitializeComponent();
 		}
 	protected:
@@ -139,7 +139,7 @@ namespace курсовая {
 	
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
-		Game^ g = gcnew Game();//передаем ссылку на эту форму в MyForm
+		Game^ g = gcnew Game();
 		g->ShowDialog();
 		
 	}

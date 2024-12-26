@@ -176,17 +176,17 @@ namespace курсовая {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
-		Rules^ m = gcnew Rules(this);//передаем ссылку на эту форму в MyForm
+		Rules^ m = gcnew Rules(this);//передаем ссылку на эту форму в Ruls
 		m->ShowDialog();
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
-		Stats^ s = gcnew Stats(this);//передаем ссылку на эту форму в MyForm
+		Stats^ s = gcnew Stats(this);//передаем ссылку на эту форму в Stats
 		s->ShowDialog();
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Hide();
-		Game^ g = gcnew Game(this);//передаем ссылку на эту форму в MyForm
+		Game^ g = gcnew Game(this);//передаем ссылку на эту форму в Game
 		g->ShowDialog();
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {

@@ -319,6 +319,13 @@ namespace курсовая {
 			Fileexception::checkfileexists(filename);
 		} catch (Fileexception^ ex) {
 			MessageBox::Show(ex->Message + "\nИмя файла: " + ex->Filename, "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			button6->Enabled = false;
+			textBox1->Enabled = false;
+			button2->Enabled = true;
+			button3->Enabled = true;
+			button4->Enabled = true;
+			button5->Enabled = true;
+			return;
 		}
 
 		w->selectrandomword(filename); // Выбор случайного слова
