@@ -329,14 +329,13 @@ namespace курсовая {
 		}
 
 		w->selectrandomword(filename); // Выбор случайного слова
-		randomword = w->getrandomword(); // Получаем выбранное слово
-		gr->setcurrentword(randomword);
-		word1 = gr->getcurrentword();
+		word1 = w->getrandomword(); // Получаем выбранное слово
+		gr->setcurrentword(word1);
 		length = word1->Length;
 		label1->Text = String::Format("Слово из {0} букв, введите букву",length);
 		for (int i = 0; i < length; i++) {
 			anspeople += "_ ";
-		}// Заполняем символами '_'
+		}// Заполняем символами '_ '
 	}
 
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -350,11 +349,10 @@ namespace курсовая {
 		else {
 			label1->Text = "";
 		}
-		String^ ui = userinput->Substring(0, 1);
-		gr->setanswer(ui);
+		gr->setanswer(userinput);
 
 		// Проверка введенной буквы
-		gr->check(ui, length, usedletters, anspeople, label1, picture);
+		gr->check(userinput, length, usedletters, anspeople, label1, picture);
 
 		if (picture > 0)
 		{
